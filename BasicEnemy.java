@@ -14,6 +14,19 @@ public class BasicEnemy extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+    int deltaX =0;
+    int deltaY =0;
+          if (Greenfoot.isKeyDown("left"))  
+        {
+            deltaX = deltaX = -1;
+            setRotation(0);
+        }
+
+        if (Greenfoot.isKeyDown("right"))  
+        {
+            deltaX = deltaX  = + 1;
+            setRotation(0);
+        }
+        setLocation(getX() + deltaX, getY() + deltaY);
     }
 }
