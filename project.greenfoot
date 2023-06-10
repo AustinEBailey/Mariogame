@@ -1,11 +1,23 @@
 #Greenfoot project file
-class.MyWorld.image=images.png
-editor.fx.0.height=737
+class.Block.image=Screenshot\ 2023-06-09\ 175307.png
+class.Ground.image=Screenshot\ 2023-06-09\ 170005.png
+class.MyWorld.image=1580594-Super-Mario-Super-Mario-Bros.-video-games-pixel.jpg
+class.Player.image=ppl3.png
+dependency1.from=MyWorld
+dependency1.to=Block
+dependency1.type=UsesDependency
+dependency2.from=MyWorld
+dependency2.to=Player
+dependency2.type=UsesDependency
+editor.fx.0.height=731
 editor.fx.0.width=814
-editor.fx.0.x=360
-editor.fx.0.y=26
+editor.fx.0.x=88
+editor.fx.0.y=12
 height=830
+ Player-Movement
 package.numDependencies=0
+package.numDependencies=2
+ main
 package.numTargets=4
 project.charset=windows-1252
 publish.hasSource=false
