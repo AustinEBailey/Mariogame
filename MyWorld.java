@@ -19,11 +19,10 @@ public class MyWorld extends World
         super(1000, 700, 1, false); 
         addObject(new Ground(),0,684) ;
         addObject(new Ground(),282,684) ;
-        addObject(new tall(),0,0) ;
+        addObject(new Block(),0,0) ;
         addObject(new Player(),50,500) ;
         getBackground().setColor(new Color(20,20,240));
         getBackground().fill();
-
         prepare();
     }
     
@@ -34,32 +33,52 @@ public class MyWorld extends World
     private void prepare()
     {
         Ground ground = new Ground();
-        addObject(ground,563,684);
+        addObject(ground,564,684);
         Ground ground2 = new Ground();
-        addObject(ground2,843,684);
-        tall tall = new tall();
-        addObject(tall,395,656);
-        tall tall2 = new tall();
-        addObject(tall2,422,656);
-        tall tall3 = new tall();
-        addObject(tall3,450,656);
-        tall tall4 = new tall();
-        addObject(tall4,477,656);
-        tall tall5 = new tall();
-        addObject(tall5,436,628);
-        tall tall6 = new tall();
-        addObject(tall6,463,628);
-        tall tall7 = new tall();
-        addObject(tall7,504,656);
-        tall tall8 = new tall();
-        addObject(tall8,491,629);
-        tall tall9 = new tall();
-        addObject(tall9,455,601);
-        tall tall10 = new tall();
-        addObject(tall10,483,600);
-        tall10.setLocation(483,600);
-        tall tall11 = new tall();
-        addObject(tall11,483,600);
+        addObject(ground2,846,684);
+        Block block = new Block();
+        addObject(block,410,656);
+        Block block2 = new Block();
+        addObject(block2,438,660);
+        block2.setLocation(437,656);
+        Block block3 = new Block();
+        addObject(block3,437,656);
+        Block block4 = new Block();
+        addObject(block4,464,656);
+        Block block5 = new Block();
+        addObject(block5,491,656);
+        Block block6 = new Block();
+        addObject(block6,518,655);
+        Block block7 = new Block();
+        addObject(block7,544,656);
+        Block block8 = new Block();
+        addObject(block8,410,629);
+        Block block9 = new Block();
+        addObject(block9,436,629);
+        Block block10 = new Block();
+        addObject(block10,463,629);
+        Block block11 = new Block();
+        addObject(block11,463,603);
+        Block block12 = new Block();
+        addObject(block12,489,629);
+        Block block13 = new Block();
+        addObject(block13,488,604);
+        Block block14 = new Block();
+        addObject(block14,488,577);
+        removeObject(block8);
+        addObject(block8,514,628);
+        Block block15 = new Block();
+        addObject(block15,512,600);
+        removeObject(block15);
+        addObject(block15,513,601);
+        Block block16 = new Block();
+        addObject(block16,514,577);
+        Block block17 = new Block();
+        addObject(block17,540,628);
+        Block block18 = new Block();
+        addObject(block18,539,602);
+        Block block19 = new Block();
+        addObject(block19,539,578);
     }
 }
 
