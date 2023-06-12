@@ -14,7 +14,10 @@ editor.fx.0.width=814
 editor.fx.0.x=88
 editor.fx.0.y=12
 height=830
+ Player-Movement
+package.numDependencies=0
 package.numDependencies=2
+ main
 package.numTargets=4
 project.charset=windows-1252
 publish.hasSource=false
