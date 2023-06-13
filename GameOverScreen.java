@@ -20,11 +20,20 @@ public class GameOverScreen extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         //keep
         super(2000, 700, 1); 
-        drawScreen(Color.BLACK,Color.RED,"GAME OVER");
+        drawScreen(Color.BLACK,Color.WHITE,"GAME OVER");
     }
 
-    public void ddrawscreen(Color bgColor, Color textColor, String message)
+    public GameOverScreen(Color bgColor, Color textColor, String message)
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        //keep
+        super(2000, 700, 1); 
+        drawScreen(bgColor,textColor,message);
+    }
+
+    public void drawScreen(Color bgColor, Color textColor, String message)
     {
+        //keep
         GreenfootImage bg = new GreenfootImage(getWidth(),getHeight());
         bg.setColor(bgColor);
         bg.fillRect(0,0,getWidth(),getHeight());
