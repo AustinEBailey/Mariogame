@@ -1,4 +1,5 @@
 #Greenfoot project file
+class.Amo.image=beeper.png
 class.Bick.image=Screenshot\ 2023-06-09\ 175307.png
 class.BossAmmo.image=bomb.png
 class.BossEnemy.image=thwomp-removebg-preview.png
@@ -7,6 +8,7 @@ class.Enemy.image=Picture3.png
 class.Ground.image=Screenshot\ 2023-06-09\ 170005.png
 class.MyWorld.image=1580594-Super-Mario-Super-Mario-Bros.-video-games-pixel.jpg
 class.Player.image=ppl3.png
+class.Projectile.image=beeper.png
 class.Start.image=Super_Mario_Bros._box.png
 class.StartScreen.image=Super_Mario_Bros._box.png
 dependency1.from=StartScreen
@@ -39,6 +41,7 @@ dependency4.type=UsesDependency
 dependency5.from=MyWorld
 dependency5.to=Enemy
 dependency5.type=UsesDependency
+
 dependency6.from=Player
 dependency6.to=GameOver
 dependency6.type=UsesDependency
@@ -80,12 +83,15 @@ target1.width=120
 target1.x=0
 target1.y=0
 target10.height=70
+
 target10.name=StartScreen
+
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=120
 target10.x=0
 target10.y=0
+
 target11.height=70
 target11.name=Coin
 target11.showInterface=false
@@ -95,11 +101,23 @@ target11.x=0
 target11.y=0
 target12.height=70
 target12.name=GameOverScreen
+
+target11.height=30
+target11.name=Enemy
+target11.showInterface=false
+target11.type=ClassTarget
+target11.width=60
+target11.x=0
+target11.y=0
+target12.height=30
+target12.name=MyWorld
+
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=120
 target12.x=0
 target12.y=0
+
 target13.height=30
 target13.name=Enemy
 target13.showInterface=false
@@ -143,7 +161,9 @@ target5.width=120
 target5.x=0
 target5.y=0
 target6.height=70
+
 target6.name=BossAmmo
+
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=120
@@ -151,27 +171,34 @@ target6.x=0
 target6.y=0
 target7.height=70
 target7.name=BossEnemy
+
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=120
 target7.x=0
 target7.y=0
 target8.height=70
+
 target8.name=Projectile
+
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=120
 target8.x=0
 target8.y=0
 target9.height=70
+
 target9.name=Bick
+
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+
 width=1550
+
 world.lastInstantiated=MyWorld
 xPosition=0
 yPosition=0

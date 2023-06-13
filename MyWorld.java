@@ -129,5 +129,6 @@ public class MyWorld extends World
         addObject(coin19,2780,52);
         BossEnemy bossEnemy = new BossEnemy();
         addObject(bossEnemy,3644,291);
+
     }
 }
