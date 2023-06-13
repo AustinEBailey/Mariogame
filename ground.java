@@ -14,6 +14,14 @@ public class Ground extends Actor
      */
     public void act()
     {
+        if(Greenfoot.isKeyDown("right"))
+        {
+            move(-6);
+        }
+        if(Greenfoot.isKeyDown("left"))
+        {
+            move(6);
+        }
         // Add your action code here.
     }
 }
