@@ -99,5 +99,7 @@ public class MyWorld extends World
         addObject(coin5,1200,403);
         Coin coin6 = new Coin();
         addObject(coin6,324,648);
+        ground2.setLocation(640,559);
+        ground3.setLocation(565,338);
     }
 }
