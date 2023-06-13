@@ -4,12 +4,13 @@ class.Coin.image=coin.png
 class.Ground.image=Screenshot\ 2023-06-09\ 170005.png
 class.Player.image=ppl3.png
 dependency1.from=MyWorld
-dependency1.to=Ground
+dependency1.to=Player
 dependency1.type=UsesDependency
-dependency2.from=MyWorld
-dependency2.to=Player
+dependency2.from=Player
+dependency2.to=GameOver
 dependency2.type=UsesDependency
 dependency3.from=Player
+<<<<<<< Updated upstream
 dependency3.to=Ground
 dependency3.type=UsesDependency
 dependency4.from=Player
@@ -25,6 +26,20 @@ editor.fx.0.y=0
 height=822
 package.numDependencies=5
 package.numTargets=6
+=======
+dependency3.to=Enemy
+dependency3.type=UsesDependency
+dependency4.from=Player
+dependency4.to=Coin
+dependency4.type=UsesDependency
+editor.fx.0.height=830
+editor.fx.0.width=1550
+editor.fx.0.x=-7
+editor.fx.0.y=-7
+height=830
+package.numDependencies=4
+package.numTargets=7
+>>>>>>> Stashed changes
 project.charset=windows-1252
 publish.hasSource=false
 publish.locked=true
