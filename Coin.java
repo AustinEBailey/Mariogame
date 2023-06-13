@@ -21,11 +21,11 @@ public class Coin extends Actor
     {
         if(Greenfoot.isKeyDown("right"))
         {
-            setLocation(getX() + -6, getY());
+            setLocation(getX() -4, getY());
         }
         if(Greenfoot.isKeyDown("left"))
         {
-            setLocation(getX() + 6, getY());
+            setLocation(getX() + 4, getY());
         }
     }
 }
