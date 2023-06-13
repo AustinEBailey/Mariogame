@@ -84,7 +84,6 @@ public class Player extends Actor
             Greenfoot.delay(10);
             getWorld(). removeObject(this);
             Greenfoot.setWorld(new GameOverScreen());
-            Greenfoot.stop();
         }
     }
 
