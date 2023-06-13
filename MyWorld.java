@@ -182,7 +182,7 @@ public class MyWorld extends World
         addObject(amo9,5,670);
         Amo amo10 = new Amo();
         addObject(amo10,176,561);
-    
+
         Amo amo11 = new Amo();
         addObject(amo11,195,524);
         Amo amo12 = new Amo();
@@ -198,5 +198,7 @@ public class MyWorld extends World
         addObject(amo16,422,574);
         Amo amo17 = new Amo();
         addObject(amo17,328,544);
+        BossEnemy bossEnemy = new BossEnemy();
+        addObject(bossEnemy,3593,289);
     }
 }
