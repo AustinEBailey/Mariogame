@@ -17,15 +17,33 @@ public class Enemy extends Actor
     int vspeed = 0; 
     int accel = 1;
     boolean check = false;
-
+    int health = 3; 
+    boolean hitByprojectile =false; 
     public void act()
     {
         if(check == false){
-            checkFall();
-        }
+           checkFall();
+       }
+        
         mapMove();
         moveEnemy();
+        hitByProjectile();
         // Add your action code here.
+    }
+    public void hitByProjectile()
+    {
+        if (isTouching(Projectile.class)&& !hitByprojectile)
+        {
+            health--;
+            hitByprojectile = true; 
+        }else if (!isTouching(Projectile.class))
+        {
+            hitByprojectile = false; 
+        }
+        if(health <=0)
+        {
+            getWorld(). removeObject(this);
+        }
     }
 
     public void checkFall(){

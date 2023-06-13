@@ -16,9 +16,11 @@ public class Player extends Actor
     int fallSpeed =0; 
     int accel = 1;
     int speed = 2;
-    int playerHeath = 3;
+    int playerHealth = 3;
     boolean touchedByEnemy =false; 
     int score;
+    int amo =0;
+    
     public void act()
     {
         checkFalling();
@@ -27,6 +29,7 @@ public class Player extends Actor
         hitCoin();
         display();
         hitByEnemy();
+        fierProjectile();
         // Add your action code here.
     }
 
@@ -60,7 +63,7 @@ public class Player extends Actor
         {   
             fall();
             if (getY() > 700){
-                playerHeath = 0;            
+                playerHealth = 0;            
             }
         }
         else if (isTouching(Ground.class))
@@ -75,16 +78,16 @@ public class Player extends Actor
     {
         if(isTouching(Enemy.class)&& !touchedByEnemy)
         {
-            playerHeath --; 
+            playerHealth --; 
             touchedByEnemy = true;
         }
         else if(!isTouching(Enemy.class))
         {
             touchedByEnemy = false;
         }
-        if (playerHeath ==0)
+        if (playerHealth ==0)
         {
-             GameOver gameover =new GameOver();
+            GameOver gameover =new GameOver();
             getWorld(). addObject(gameover,getX()+500,350);
             getWorld(). removeObject(this);
         }
@@ -105,14 +108,36 @@ public class Player extends Actor
     {
         if(score == 3 )
         {
-            playerHeath = playerHeath + 1;
+            playerHealth = playerHealth + 1;
             score = 0;
         }
     }
 
     public void display()
     {
-        getWorld().showText("playerHeath:" + playerHeath + "score:" + score, getWorld(). getWidth()/8,20);
+        getWorld().showText("playerHealth:" + playerHealth + "score:" + score, getWorld(). getWidth()/8,20);
+    }
+    public void Amo()
+    {
+        if(isTouching (Amo.class)){
+            amo = amo + 3;
+        }
+        Actor amo = getOneIntersectingObject(Amo.class);
+        if(amo != null){
+            getWorld(). removeObject(amo);
+
+        }
+    }
+
+    public void fierProjectile()
+    {
+        if (Greenfoot.mousePressed(null)&& amo >=3)
+        {
+            Projectile projectile = new Projectile();
+            getWorld().addObject(projectile, getX(),getY());
+            projectile.turnTowards(Greenfoot.getMouseInfo().getX(),Greenfoot.getMouseInfo().getY());
+            amo--;
+        }
     }
 }
 
