@@ -22,42 +22,39 @@ public class Enemy extends Actor
     public void act()
     {
         if(check == false){
-           checkFall();
-       }
-        
+            checkFall();
+        }
+
         mapMove();
         moveEnemy();
         hitByProjectile();
         // Add your action code here.
     }
+
     public void hitByProjectile()
     {
         if (isTouching(Projectile.class)&& !hitByprojectile)
         {
             health--;
-            hitByprojectile = true; 
-        }else if (!isTouching(Projectile.class))
-        {
-            hitByprojectile = false; 
-        }
-        if(health <=0)
-        {
-            getWorld(). removeObject(this);
+            Actor projectile = getOneIntersectingObject(Projectile.class);
+            getWorld(). removeObject(projectile);
+            if(health <=0)
+            {
+                getWorld(). removeObject(this);
+            }
         }
     }
 
     public void checkFall(){
         if(!isTouching(Ground.class))
-        {   do{
+            do{
                 fall();  
             }while(onGround() == false);
 
-        }
         if (isTouching(Ground.class))
-        {
             setLocation(getX(),getY() -1);
-            vspeed = 0; 
-        }
+        vspeed = 0; 
+
         check = true;
     }
 
@@ -65,7 +62,7 @@ public class Enemy extends Actor
     {
         if(Greenfoot.isKeyDown("right"))
         {
-            setLocation(getX() -4, getY());
+            setLocation(getX() - 4, getY());
         }
         if(Greenfoot.isKeyDown("left"))
         {
@@ -103,4 +100,5 @@ public class Enemy extends Actor
         vspeed = vspeed + accel; 
 
     }
+
 }

@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Coin here.
+ * Write a description of class Ground here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -9,26 +9,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ground extends Actor
 {
     /**
-     * Act - do whatever the Coin wants to do. This method is called whenever
+     * Act - do whatever the Ground wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-        //keep
-        mapMove();
-        // Add your action code here.
-    }
-     public void mapMove()
-    {
-        //keep
         if(Greenfoot.isKeyDown("right"))
         {
-            setLocation(getX() -4, getY());
+            move(-4);
         }
         if(Greenfoot.isKeyDown("left"))
         {
-            setLocation(getX() + 4, getY());
+            move(4);
         }
+        // Add your action code here.
     }
 }
-
