@@ -87,5 +87,17 @@ public class MyWorld extends World
         ground2.setLocation(591,122);
         removeObject(ground3);
         removeObject(ground3);
+        Coin coin = new Coin();
+        addObject(coin,858,227);
+        Coin coin2 = new Coin();
+        addObject(coin2,761,390);
+        Coin coin3 = new Coin();
+        addObject(coin3,568,80);
+        Coin coin4 = new Coin();
+        addObject(coin4,1173,133);
+        Coin coin5 = new Coin();
+        addObject(coin5,1200,403);
+        Coin coin6 = new Coin();
+        addObject(coin6,324,648);
     }
 }
