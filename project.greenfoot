@@ -3,18 +3,25 @@ class.Bick.image=Screenshot\ 2023-06-09\ 175307.png
 class.Ground.image=Screenshot\ 2023-06-09\ 170005.png
 class.MyWorld.image=1580594-Super-Mario-Super-Mario-Bros.-video-games-pixel.jpg
 class.Player.image=ppl3.png
-dependency3.from=MyWorld
-dependency3.to=Player
+dependency1.from=MyWorld
+dependency1.to=Ground
+dependency1.type=UsesDependency
+dependency2.from=MyWorld
+dependency2.to=Player
+dependency2.type=UsesDependency
+dependency3.from=Player
+dependency3.to=Ground
 dependency3.type=UsesDependency
-dependency4.from=Player
-dependency4.to=Ground
-dependency4.type=UsesDependency
-editor.fx.0.height=737
-editor.fx.0.width=814
-editor.fx.0.x=359
-editor.fx.0.y=162
-height=884
-package.numDependencies=4
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+<<<<<<< Updated upstream
+height=400
+=======
+height=830
+>>>>>>> Stashed changes
+package.numDependencies=3
 package.numTargets=5
 project.charset=windows-1252
 publish.hasSource=false
@@ -66,7 +73,11 @@ target5.width=120
 target5.x=0
 target5.y=0
 version=3.0.0
-width=1236
+<<<<<<< Updated upstream
+width=700
+=======
+width=1550
+>>>>>>> Stashed changes
 world.lastInstantiated=MyWorld
 xPosition=0
 yPosition=0
