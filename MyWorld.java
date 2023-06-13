@@ -126,5 +126,9 @@ public class MyWorld extends World
         ground4.setLocation(1168,295);
         enemy4.setLocation(1108,250);
         enemy4.setLocation(1099,224);
+        Ground ground19 = new Ground();
+        addObject(ground19,932,402);
+        ground19.setLocation(920,101);
+        ground19.setLocation(835,72);
     }
 }

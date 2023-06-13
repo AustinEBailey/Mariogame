@@ -40,7 +40,14 @@ public class Enemy extends Actor
             getWorld(). removeObject(projectile);
             if(health <=0)
             {
-                getWorld(). removeObject(this);
+                int x = Greenfoot.getRandomNumber(2);
+                if( x == 0){
+                getWorld().addObject(new Amo(), getX(), getY());
+                } else {
+                getWorld().addObject(new Coin(), getX(), getY());
+                }
+                
+                getWorld(). removeObject(this); 
             }
         }
     }
