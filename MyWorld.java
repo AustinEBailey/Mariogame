@@ -28,8 +28,10 @@ public class MyWorld extends World
      */
     private void prepare()
     {
+        //Keep
         addObject(new Ground(),0,686);
         addObject(new Ground(),282,686);
         addObject(new Player(),200,600);
+        addObject(new Coin(),200,500);
     }
 }
