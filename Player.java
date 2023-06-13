@@ -27,6 +27,7 @@ public class Player extends Actor
         addLife();
         move();
         hitCoin();
+        Amo();
         display();
         hitByBossAmmo();
         hitByEnemy();
@@ -34,11 +35,16 @@ public class Player extends Actor
         // Add your action code here.
     }
 
+
+
+
     public void hitByBossAmmo()
     {
         if(isTouching(BossAmmo.class))
         {
-            playerHeath --;
+
+            playerHealth --;
+
             Actor bossAmmo = getOneIntersectingObject(BossAmmo.class);
             getWorld().removeObject(bossAmmo);
         }
