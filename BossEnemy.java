@@ -17,6 +17,7 @@ public class BossEnemy extends Actor
     boolean check = false;
     boolean act = true;
     int timer = 1;
+    int health = 50;
     /**
      * Act - do whatever the BossEnemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -30,6 +31,26 @@ public class BossEnemy extends Actor
         moveEnemy();
         shoot();
         // Add your action code here.
+    }
+      public void hitByProjectile()
+    {
+        if (isTouching(Projectile.class))
+        {
+            health--;
+            Actor projectile = getOneIntersectingObject(Projectile.class);
+            getWorld(). removeObject(projectile);
+            if(health <=0)
+            {
+                int x = Greenfoot.getRandomNumber(2);
+                if( x == 0){
+                getWorld().addObject(new Amo(), getX(), getY());
+                } else {
+                getWorld().addObject(new Coin(), getX(), getY());
+                }
+                
+                getWorld(). removeObject(this); 
+            }
+        }
     }
 
         public void fall()
@@ -71,7 +92,8 @@ public class BossEnemy extends Actor
 
         public void shoot()
         {
-            if(shotDelay >= 100)
+            int x = Greenfoot.getRandomNumber(500);
+            if(shotDelay >= x * 100)
             {
                 getWorld().addObject(new BossAmmo(), getX(), getY());
                 shotDelay = 0;
