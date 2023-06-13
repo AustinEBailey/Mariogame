@@ -26,8 +26,19 @@ public class Player extends Actor
         move();
         hitCoin();
         display();
+        hitByBossAmmo();
         hitByEnemy();
         // Add your action code here.
+    }
+
+    public void hitByBossAmmo()
+    {
+        if(isTouching(BossAmmo.class))
+        {
+            playerHeath --;
+            Actor bossAmmo = getOneIntersectingObject(BossAmmo.class);
+            getWorld().removeObject(bossAmmo);
+        }
     }
 
     public void move()
@@ -84,7 +95,7 @@ public class Player extends Actor
         }
         if (playerHeath ==0)
         {
-             GameOver gameover =new GameOver();
+            GameOver gameover =new GameOver();
             getWorld(). addObject(gameover,getX()+500,350);
             getWorld(). removeObject(this);
         }
