@@ -12,16 +12,12 @@ public class Enemy extends Actor
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int enemySpeed = -3;
     int count = 1;
-    int speed = 1;
+    int speed = 2;
     int vspeed = 0; 
     int accel = 1;
     boolean check = false;
-    public Enemy(int height, int width)
-    {
-        getImage().scale(height, width);
-    }
+
     public void act()
     {
         if(check == false){
@@ -29,7 +25,6 @@ public class Enemy extends Actor
         }
         mapMove();
         moveEnemy();
-        size();
         // Add your action code here.
     }
 
@@ -52,7 +47,7 @@ public class Enemy extends Actor
     {
         if(Greenfoot.isKeyDown("right"))
         {
-            setLocation(getX() + -4, getY());
+            setLocation(getX() -4, getY());
         }
         if(Greenfoot.isKeyDown("left"))
         {
@@ -90,11 +85,4 @@ public class Enemy extends Actor
         vspeed = vspeed + accel; 
 
     }
-
-    public void size()
-    {
-      
-
-    }
-
 }

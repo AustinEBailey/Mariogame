@@ -13,7 +13,7 @@ public class Player extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int jumpHight= -20;
-    int vspeed =0; 
+    int fallSpeed =0; 
     int accel = 1;
     int speed = 2;
     int playerHeath = 3;
@@ -34,15 +34,18 @@ public class Player extends Actor
     {
         if(Greenfoot.isKeyDown("space") && (onGround()==true))
         {
-            vspeed = jumpHight; 
+            fallSpeed = jumpHight; 
             fall();
+        } else if (isTouching(Ground.class))
+        {
+            fallSpeed =7; 
         }
     }
 
     public void fall()
     {
-        setLocation(getX(), getY() + vspeed);
-        vspeed = vspeed + accel; 
+        setLocation(getX(), getY() + fallSpeed);
+        fallSpeed = fallSpeed + accel; 
     }
 
     boolean onGround()
@@ -63,7 +66,7 @@ public class Player extends Actor
         else if (isTouching(Ground.class))
         {
             setLocation(getX(),getY() -1);
-            vspeed = 0; 
+            fallSpeed = 0; 
         }
 
     }
@@ -81,10 +84,9 @@ public class Player extends Actor
         }
         if (playerHeath ==0)
         {
-            Greenfoot.delay(10);
+             GameOver gameover =new GameOver();
+            getWorld(). addObject(gameover,getX()+500,350);
             getWorld(). removeObject(this);
-            Greenfoot.setWorld(new GameOverScreen());
-            Greenfoot.stop();
         }
     }
 
