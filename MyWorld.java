@@ -33,5 +33,7 @@ public class MyWorld extends World
         addObject(new Ground(),282,686);
         addObject(new Player(),200,600);
         addObject(new Coin(),200,500);
+        Ground ground3 = new Ground();
+        addObject(ground3,462,508);
     }
 }
