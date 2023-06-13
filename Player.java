@@ -81,10 +81,9 @@ public class Player extends Actor
         }
         if (playerHeath ==0)
         {
-            
-            GameOver gameover =new GameOver();
-            getWorld(). addObject(gameover,getX()+500,350);
+            Greenfoot.delay(10);
             getWorld(). removeObject(this);
+            Greenfoot.setWorld(new GameOverScreen());
             Greenfoot.stop();
         }
     }
