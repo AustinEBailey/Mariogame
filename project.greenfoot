@@ -16,7 +16,11 @@ editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< Updated upstream
 height=400
+=======
+height=830
+>>>>>>> Stashed changes
 package.numDependencies=3
 package.numTargets=5
 project.charset=windows-1252
@@ -69,7 +73,11 @@ target5.width=120
 target5.x=0
 target5.y=0
 version=3.0.0
+<<<<<<< Updated upstream
 width=700
+=======
+width=1550
+>>>>>>> Stashed changes
 world.lastInstantiated=MyWorld
 xPosition=0
 yPosition=0
