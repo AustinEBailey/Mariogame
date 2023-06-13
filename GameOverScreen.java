@@ -19,11 +19,11 @@ public class GameOverScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         //keep
-        super(2000, 700, 1); 
-        drawScreen(Color.BLACK,Color.RED,"GAME OVER");
+        super(1300, 698, 1); 
+        drawScreen(Color.BLACK,Color.WHITE,"GAME OVER");
     }
 
-    public void ddrawscreen(Color bgColor, Color textColor, String message)
+    public void drawScreen(Color bgColor, Color textColor, String message)
     {
         GreenfootImage bg = new GreenfootImage(getWidth(),getHeight());
         bg.setColor(bgColor);
@@ -32,7 +32,7 @@ public class GameOverScreen extends World
         Font f = new Font("SansSerif",60);
         bg.setFont(f);
         bg.setColor(textColor);
-        bg.drawString(message,getWidth()/2-message.length()*60, getHeight()/2);
+        bg.drawString(message,getWidth()/2-message.length()*20, getHeight()/2);
         //keep
     }
 }
