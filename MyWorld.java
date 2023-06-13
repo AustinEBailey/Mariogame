@@ -31,6 +31,5 @@ public class MyWorld extends World
         addObject(new Ground(),0,686);
         addObject(new Ground(),282,686);
         addObject(new Player(),200,600);
-
     }
 }
