@@ -130,5 +130,17 @@ public class MyWorld extends World
         addObject(ground19,932,402);
         ground19.setLocation(920,101);
         ground19.setLocation(835,72);
+        Ground ground20 = new Ground();
+        addObject(ground20,3162,277);
+        Ground ground21 = new Ground();
+        addObject(ground21,3503,185);
+        Ground ground22 = new Ground();
+        addObject(ground22,3455,449);
+        Ground ground23 = new Ground();
+        addObject(ground23,3740,447);
+        ground23.setLocation(3720,456);
+        ground23.setLocation(3719,452);
+        BossEnemy bossEnemy = new BossEnemy();
+        addObject(bossEnemy,3578,331);
     }
 }
