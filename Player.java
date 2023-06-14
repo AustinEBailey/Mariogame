@@ -20,7 +20,7 @@ public class Player extends Actor
     boolean touchedByEnemy =false; 
     int score;
     int amo =0;
-    
+
     public void act()
     {
         checkFalling();
@@ -31,20 +31,15 @@ public class Player extends Actor
         display();
         hitByBossAmmo();
         hitByEnemy();
-        fierProjectile();
+        fireProjectile();
         // Add your action code here.
     }
-
-
-
 
     public void hitByBossAmmo()
     {
         if(isTouching(BossAmmo.class))
         {
-
             playerHealth --;
-
             Actor bossAmmo = getOneIntersectingObject(BossAmmo.class);
             getWorld().removeObject(bossAmmo);
         }
@@ -132,8 +127,9 @@ public class Player extends Actor
 
     public void display()
     {
-        getWorld().showText("playerHealth:" + playerHealth + "score:" + score, getWorld(). getWidth()/8,20);
+        getWorld().showText("playerHealth:" + playerHealth + "score:" + score + "Ammo:"+ amo, getWorld(). getWidth()/8,20);
     }
+
     public void Amo()
     {
         if(isTouching (Amo.class)){
@@ -146,7 +142,7 @@ public class Player extends Actor
         }
     }
 
-    public void fierProjectile()
+    public void fireProjectile()
     {
         if (Greenfoot.mousePressed(null)&& amo >=3)
         {

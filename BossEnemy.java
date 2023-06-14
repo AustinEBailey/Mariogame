@@ -30,6 +30,7 @@ public class BossEnemy extends Actor
         mapMove();
         moveEnemy();
         shoot();
+        hitByProjectile();
         // Add your action code here.
     }
       public void hitByProjectile()
@@ -47,8 +48,8 @@ public class BossEnemy extends Actor
                 } else {
                 getWorld().addObject(new Coin(), getX(), getY());
                 }
-                
                 getWorld(). removeObject(this); 
+                Greenfoot.setWorld(new Endscreen());
             }
         }
     }
