@@ -16,10 +16,10 @@ public class Player extends Actor
     int fallSpeed =0; 
     int accel = 1;
     int speed = 2;
-    int playerHealth = 3;
+    int playerHealth = 6;
     boolean touchedByEnemy =false; 
     int score;
-    int amo =0;
+    int ammo =80;
 
     public void act()
     {
@@ -27,7 +27,7 @@ public class Player extends Actor
         addLife();
         move();
         hitCoin();
-        Amo();
+        ammo();
         display();
         hitByBossAmmo();
         hitByEnemy();
@@ -127,29 +127,29 @@ public class Player extends Actor
 
     public void display()
     {
-        getWorld().showText("playerHealth:" + playerHealth + "score:" + score + "Ammo:"+ amo, getWorld(). getWidth()/8,20);
+        getWorld().showText("playerHealth:" + playerHealth + "score:" + score + "Ammo:"+ ammo, getWorld(). getWidth()/8,20);
     }
 
-    public void Amo()
+    public void ammo()
     {
-        if(isTouching (Amo.class)){
-            amo = amo + 3;
+        if(isTouching (Ammo.class)){
+            ammo = ammo + 3;
         }
-        Actor amo = getOneIntersectingObject(Amo.class);
-        if(amo != null){
-            getWorld(). removeObject(amo);
+        Actor ammo = getOneIntersectingObject(Ammo.class);
+        if(ammo != null){
+            getWorld(). removeObject(ammo);
 
         }
     }
 
     public void fireProjectile()
     {
-        if (Greenfoot.mousePressed(null)&& amo >=3)
+        if (Greenfoot.mousePressed(null)&& ammo >=3)
         {
             Projectile projectile = new Projectile();
             getWorld().addObject(projectile, getX(),getY());
             projectile.turnTowards(Greenfoot.getMouseInfo().getX(),Greenfoot.getMouseInfo().getY());
-            amo--;
+            ammo--;
         }
     }
 }
